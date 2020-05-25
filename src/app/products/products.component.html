@@ -1,0 +1,13 @@
+<div class="content" role="main">
+    <!-- Products -->
+    <h2>Products</h2>
+    <p>Here are some links to help you get started:</p>
+
+    <div class="card-container">
+        <a class="card" rel="noopener" *ngFor="let product of (products | async)" [routerLink]="['/details', product.id]" routerLinkActive="router-link-active" >
+            <span>{{ product.name }}</span>
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+        </a>
+
+    </div>

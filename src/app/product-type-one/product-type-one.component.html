@@ -1,0 +1,7 @@
+<div formArrayName="customFields" *ngFor="let field of product.customFields; let i = index;">
+    <div [formGroupName]="i" class="form-group">
+        <label for="{{field.fieldName}}">{{ field.label }}</label>
+        <input class="form-control" name="{{field.fieldName}}" id="{{field.field}}" type="text"
+            formControlName="value">
+    </div>
+</div>
